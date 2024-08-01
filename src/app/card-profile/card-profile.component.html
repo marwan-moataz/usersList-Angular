@@ -1,4 +1,16 @@
 <div class="container col mt-5">
+  <div class="container my-5">
+    <form class="w-50 d-flex justify-content-center w-100" role="search">
+      <input
+        class="form-control me-2"
+        style="width: 30%"
+        type="search"
+        placeholder="Search By Username"
+        aria-label="Search"
+        (input)="filterUsers($event)"
+      />
+    </form>
+  </div>
   <div class="row">
     @for (item of usersArr; track $index) {
     <div class="card col-3" style="width: 18rem">

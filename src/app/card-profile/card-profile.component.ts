@@ -102,4 +102,12 @@ export class CardProfileComponent {
       admin: true,
     },
   ];
+  temp = [...this.usersArr];
+
+  filterUsers(event: any): void {
+    event.preventDefault();
+    this.usersArr = this.temp.filter((user) =>
+      user.username.toLowerCase().includes(event.target?.value.toLowerCase())
+    );
+  }
 }
