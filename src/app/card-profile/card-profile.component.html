@@ -1,0 +1,24 @@
+<div class="container col mt-5">
+  <div class="row">
+    @for (item of usersArr; track $index) {
+    <div class="card col-3" style="width: 18rem">
+      <img
+        src="../../assets/personal.jpeg"
+        class="card-img-top rounded"
+        alt="..."
+      />
+      <div class="card-body">
+        <h5 class="card-title text-center">username: {{ item.username }}</h5>
+
+        <p class="card-text text-center">Email: {{ item.email }}</p>
+        <p class="card-text text-center">Phone: {{ item.phone }}</p>
+        @if (item.admin) {
+        <p class="card-text text-center"><i class="fa-solid fa-star"></i></p>
+        }@else {
+        <p class="card-text text-center"><i class="fa-regular fa-star"></i></p>
+        }
+      </div>
+    </div>
+    }
+  </div>
+</div>

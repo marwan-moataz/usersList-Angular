@@ -1,0 +1,15 @@
+.row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  padding: 0 !important;
+}
